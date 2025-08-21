@@ -25,6 +25,19 @@ const collapsedCategories = useStorage<Record<string, boolean>>(
   },
 );
 
+watch(
+  toolsByCategory,
+  (newCategories) => {
+    if (!newCategories) return;
+    for (const category of newCategories) {
+      if (collapsedCategories.value[category.name] === undefined) {
+        collapsedCategories.value[category.name] = true; // Default to collapsed
+      }
+    }
+  },
+  { immediate: true, deep: true },
+);
+
 function toggleCategoryCollapse({ name }: { name: string }) {
   collapsedCategories.value[name] = !collapsedCategories.value[name];
 }
