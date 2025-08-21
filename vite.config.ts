@@ -58,7 +58,7 @@ export default defineConfig({
       strategies: 'generateSW',
       manifest: {
         name: 'EBN Tools',
-        description: 'Aggregated set of useful tools for developers.',
+        description: '全力助力开发工作者。',
         display: 'standalone',
         lang: 'fr-FR',
         start_url: `${baseUrl}?utm_source=pwa&utm_medium=pwa`,
@@ -67,22 +67,26 @@ export default defineConfig({
         background_color: '#f1f5f9',
         icons: [
           {
-            src: '/favicon-16x16.png',
+            // src: '/favicon-16x16.png',
+            src: 'favicon.ico',
             type: 'image/png',
             sizes: '16x16',
           },
           {
-            src: '/favicon-32x32.png',
+            // src: '/favicon-32x32.png',
+            src: 'favicon.ico',
             type: 'image/png',
             sizes: '32x32',
           },
           {
-            src: '/android-chrome-192x192.png',
+            // src: '/android-chrome-192x192.png',
+            src: 'favicon.ico',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/android-chrome-512x512.png',
+            // src: '/android-chrome-512x512.png',
+            src: 'favicon.ico',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable',
